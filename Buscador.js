@@ -16,7 +16,7 @@ let todasMaterias = [
   },
   {
     materia: "Infra I",
-    link: "https://digitalhouse.zoom.us/my/aulavirtual36",
+    link: "https://digitalhouse.zoom.us/j/4613961104?pwd=aulasDH.36&_x_zm_rtaid=0Y2NnCPBT4C4XSA2KhI6qw.1634044292850.5121a86df9e18588fbf11637d575447e&_x_zm_rhtaid=391#success",
     pass: "aulasDH.36",
     dias: [1, 3, 4],
     horarios: [1, 1, 1],
@@ -30,7 +30,7 @@ let todasMaterias = [
   },
   {
     materia: "Desing Th",
-    link: "https://digitalhouse.zoom.us/my/aulavirtual23",
+    link: "https://digitalhouse.zoom.us/j/4613961104?pwd=aulasDH.23&_x_zm_rtaid=0Y2NnCPBT4C4XSA2KhI6qw.1634044292850.5121a86df9e18588fbf11637d575447e&_x_zm_rhtaid=391#success",
     pass: "aulasDH.23",
     dias: [3],
     horarios: [2],
