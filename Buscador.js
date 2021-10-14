@@ -2,35 +2,35 @@ let fechaActual = new Date();
 let todasMaterias = [
   {
     materia: "Testing I",
-    link: "https://digitalhouse.zoom.us/j/9281135498?pwd=UGVOU0c3cFlZNmJqcjFkLzJzTHdJdz09&_x_zm_rtaid=tRl-CK4KSE-sqBqcX6vIOg.1633451980617.752fcec814c8d19fef1e07a542edae9e&_x_zm_rhtaid=806#success",
+    link: "https://digitalhouse.zoom.us/j/9281135498?pwd=UGVOU0c3cFlZNmJqcjFkLzJzTHdJdz09&_x_zm_rtaid=tRl-CK4KSE-sqBqcX6vIOg.1633451980617.752fcec814c8d19fef1e07a542edae9e&_x_zm_rhtaid=806#",
     pass: "aulasDH.52",
     dias: [2, 4, 5],
     horarios: [2, 2, 3],
   },
   {
     materia: "ProOrObj",
-    link: "https://digitalhouse.zoom.us/j/4169064164?pwd=L1Q0aFdaSDZ0R25SVG1lc2NMTk1iQT09&_x_zm_rtaid=KIo-9r58SV-Yl1qIiXfYMA.1633368962722.3e8edb4307d68c53277f9c1047d2db6a&_x_zm_rhtaid=874#success",
+    link: "https://digitalhouse.zoom.us/j/4169064164?pwd=L1Q0aFdaSDZ0R25SVG1lc2NMTk1iQT09&_x_zm_rtaid=KIo-9r58SV-Yl1qIiXfYMA.1633368962722.3e8edb4307d68c53277f9c1047d2db6a&_x_zm_rhtaid=874#",
     pass: "aulasDH.40",
     dias: [1, 2, 5],
     horarios: [2, 3, 2],
   },
   {
     materia: "Infra I",
-    link: "https://digitalhouse.zoom.us/j/4613961104?pwd=aulasDH.36&_x_zm_rtaid=0Y2NnCPBT4C4XSA2KhI6qw.1634044292850.5121a86df9e18588fbf11637d575447e&_x_zm_rhtaid=391#success",
+    link: "https://digitalhouse.zoom.us/j/4613961104?pwd=YncwRXN1Mm03TnNSS0FKSWUyL09mdz09&_x_zm_rtaid=15OAOiI1TFS64awv1tFWPQ.1634220294886.c914746dba32813be3d4bc7fd64b008a&_x_zm_rhtaid=390#",
     pass: "aulasDH.36",
     dias: [1, 3, 4],
     horarios: [1, 1, 1],
   },
   {
     materia: "Front II",
-    link: "https://digitalhouse.zoom.us/j/8194296021?pwd=ak1MNFIrY3lBMVFWZVAxTE1keHU4dz09&_x_zm_rtaid=KIo-9r58SV-Yl1qIiXfYMA.1633368962722.3e8edb4307d68c53277f9c1047d2db6a&_x_zm_rhtaid=874#success",
+    link: "https://digitalhouse.zoom.us/j/8194296021?pwd=ak1MNFIrY3lBMVFWZVAxTE1keHU4dz09&_x_zm_rtaid=KIo-9r58SV-Yl1qIiXfYMA.1633368962722.3e8edb4307d68c53277f9c1047d2db6a&_x_zm_rhtaid=874#",
     pass: "aulasDH.21",
     dias: [1, 3, 4],
     horarios: [3, 3, 3],
   },
   {
     materia: "Desing Th",
-    link: "https://digitalhouse.zoom.us/j/4613961104?pwd=aulasDH.23&_x_zm_rtaid=0Y2NnCPBT4C4XSA2KhI6qw.1634044292850.5121a86df9e18588fbf11637d575447e&_x_zm_rhtaid=391#success",
+    link: "https://digitalhouse.zoom.us/j/4613961104?pwd=aulasDH.23&_x_zm_rtaid=0Y2NnCPBT4C4XSA2KhI6qw.1634044292850.5121a86df9e18588fbf11637d575447e&_x_zm_rhtaid=391#",
     pass: "aulasDH.23",
     dias: [3],
     horarios: [2],
@@ -106,9 +106,9 @@ function imprimirProximaClase() {
               <p class="materiaHorario"> de ${buscarCursos.turnoAHora(
                 clase.horarios[clase.dias.indexOf(buscarCursos.hoy)]
               )}</p>
-              <a href="${
+              <a target="_blank" href="${
                 clase.link
-              }" target="_blank"> <button>Link a la clase</button></a>
+              }"> <button>Link a la clase</button></a>
               </div>`;
 
       console.log("PC");
@@ -125,9 +125,9 @@ function imprimirClasesHoy() {
                   <p class="materiaHorario"> de ${buscarCursos.turnoAHora(
                     clase.horarios[clase.dias.indexOf(buscarCursos.hoy)]
                   )}</p>
-                  <a href="${
+                  <a target="_blank" href="${
                     clase.link
-                  }" target="_blank"> <button>Link a la clase</button></a>
+                  }"> <button>Link a la clase</button></a>
                   </div>`;
 
     console.log("CH");
