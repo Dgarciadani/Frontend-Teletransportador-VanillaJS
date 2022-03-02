@@ -2,26 +2,26 @@ let fechaActual = new Date();
 let todasMaterias = [
   {
     materia: "Infra II",
-    link: "https://digitalhouse.zoom.us/j/9386966775?pwd=UGRySTJsU0g5cTRXM3V4QzFoU204QT09&_x_zm_rtaid=i0T-U5zzTdGRLrVRxdKx4Q.1646229614724.271e29cee69d45025f294d8a8ff0894a&_x_zm_rhtaid=635",
+    link: "https://digitalhouse.zoom.us/j/9386966775?pwd=UGRySTJsU0g5cTRXM3V4QzFoU204QT09&_x_zm_rtaid=i0T-U5zzTdGRLrVRxdKx4Q.1646229614724.271e29cee69d45025f294d8a8ff0894a&_x_zm_rhtaid=635#",
     pass: "aulasDH.52",
-    dias: [2, 4, 5],
-    horarios: [2, 2, 3],
-  },
-  {
-    materia: "Backend I",
-    link: "https://digitalhouse.zoom.us/j/4260292371?pwd=QnEvaTFIZm5peVRLT2F5VFQ4SzZIQT09&_x_zm_rtaid=_uQ0EQiHT7miAwvcC_jsFQ.1646238671217.feabd5c963f08b38c3aab794807fc3f2&_x_zm_rhtaid=746",
-    pass: "aulasDH.40",
-    dias: [1, 2, 5],
-    horarios: [2, 3, 2],
-  },
-  {
-    materia: "Infra I",
-    link: "https://digitalhouse.zoom.us/j/4613961104?pwd=YncwRXN1Mm03TnNSS0FKSWUyL09mdz09&_x_zm_rtaid=15OAOiI1TFS64awv1tFWPQ.1634220294886.c914746dba32813be3d4bc7fd64b008a&_x_zm_rhtaid=390#",
-    pass: "aulasDH.36",
-    dias: [1, 3, 4],
+    dias: [2, 3, 4],
     horarios: [1, 1, 1],
   },
   {
+    materia: "Backend I",
+    link: "https://digitalhouse.zoom.us/j/4260292371?pwd=QnEvaTFIZm5peVRLT2F5VFQ4SzZIQT09&_x_zm_rtaid=_uQ0EQiHT7miAwvcC_jsFQ.1646238671217.feabd5c963f08b38c3aab794807fc3f2&_x_zm_rhtaid=746#",
+    pass: "aulasDH.40",
+    dias: [1, 2, 2, 3, 4, 4],
+    horarios: [2, 1, 2, 2, 2, 3],
+  },
+  {
+    materia: "Frontend III",
+    link: "https://digitalhouse.zoom.us/j/6434543399?pwd=RWdYMENtNXhPZVJIZk9ZWm00WERUUT09&_x_zm_rtaid=mryh6gcsRF2IJ1a-MY-Z5g.1646254871439.714e324fc2c11d3c59232701cc1508c7&_x_zm_rhtaid=134#",
+    pass: "aulasDH.36",
+    dias: [1, 3, 4],
+    horarios: [4, 4, 4],
+  },
+  /* {
     materia: "Front II",
     link: "https://digitalhouse.zoom.us/j/8194296021?pwd=ak1MNFIrY3lBMVFWZVAxTE1keHU4dz09&_x_zm_rtaid=KIo-9r58SV-Yl1qIiXfYMA.1633368962722.3e8edb4307d68c53277f9c1047d2db6a&_x_zm_rhtaid=874#",
     pass: "aulasDH.21",
@@ -34,7 +34,7 @@ let todasMaterias = [
     pass: "aulasDH.23",
     dias: [3],
     horarios: [2],
-  },
+  }, */
 ];
 
 const totalClasesHoy = document.querySelector(".clasesHoy");
@@ -54,6 +54,8 @@ buscarCursos = {
       return "13:30 a 15:30";
     } else if (turno == 3) {
       return "16:00 a 18:00";
+    } else if (turno == 4) {
+      return "18:00 a 20:00";
     }
   },
   hoyClases: function () {
@@ -76,12 +78,17 @@ buscarCursos = {
       return this.hoyClases().filter(
         (turno) => turno.horarios[turno.dias.indexOf(this.hoy)] === 2
       );
-    } else if (this.horaminuto <= 18.0 && this.horaminuto >= 15.31) {
+    } else if (this.horaminuto <= 17.0 && this.horaminuto >= 15.31) {
       console.log("Entro en 3ro");
       return this.hoyClases().filter(
         (turno) => turno.horarios[turno.dias.indexOf(this.hoy)] === 3
       );
-    } else if (this.horaminuto > 18.0 && this.hoy < 6) {
+    } else if (this.horaminuto <= 20.0 && this.horaminuto >= 17.5) {
+      console.log("Entro en 3ro");
+      return this.hoyClases().filter(
+        (turno) => turno.horarios[turno.dias.indexOf(this.hoy)] === 4
+      );
+    } else if (this.horaminuto > 20.0 && this.hoy < 6) {
       return "No hay mas clases por hoy campeon";
     } else if (this.horaminuto > 18.0 && this.hoy >= 6) {
       return "A disfrutar ese finde, la facu se recursa, la vida no!";
