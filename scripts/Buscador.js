@@ -4,7 +4,7 @@ let todasMaterias = [
     materia: "Infra II",
     link: "https://digitalhouse.zoom.us/j/9386966775?pwd=UGRySTJsU0g5cTRXM3V4QzFoU204QT09&_x_zm_rtaid=i0T-U5zzTdGRLrVRxdKx4Q.1646229614724.271e29cee69d45025f294d8a8ff0894a&_x_zm_rhtaid=635#",
     pass: "aulasDH.52",
-    dias: [2, 3, 4],
+    dias: [1, 3, 5],
     horarios: [1, 1, 1],
   },
   {
